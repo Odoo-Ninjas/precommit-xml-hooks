@@ -1,6 +1,6 @@
 - id: xmlstarlet-format
   name: Format XML using xmlstarlet
-  entry: pwd
+  entry: pwd; echo "HALLO"
   language: system
   files: \.xml$
 
