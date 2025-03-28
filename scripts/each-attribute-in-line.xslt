@@ -17,13 +17,12 @@
 		<xsl:choose>
 			<xsl:when test="count(child::node()) = 0">
 				<xsl:text>/></xsl:text>
-		</xsl:when>
-		<xsl:otherwise>
+			</xsl:when>
+			<xsl:otherwise>
 			<xsl:text>></xsl:text>
 			<xsl:apply-templates select="node()"/>
 			<xsl:text>&#10;</xsl:text>
 			<xsl:text>
-			</
 		</xsl:text>
 		<xsl:value-of select="name()"/>
 		<xsl:text>></xsl:text>
