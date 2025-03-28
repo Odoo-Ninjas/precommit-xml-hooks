@@ -1,6 +1,6 @@
 - id: show-info
   name: Format XML using xmlstarlet
-  entry: 
+  entry: bash
   language: system
   files: \.xml$
 - id: xmlstarlet-format
