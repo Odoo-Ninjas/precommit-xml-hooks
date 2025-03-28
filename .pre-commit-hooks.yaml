@@ -1,6 +1,6 @@
 - id: xmlstarlet-format
   name: Format XML using xmlstarlet
-  entry: xmlstarlet-format.sh
+  entry: bash -c "echo $PATH"
   language: system
   files: \.xml$
 
