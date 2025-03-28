@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="xml" indent="yes"/>
+  <xsl:output method="xml" indent="yes" />
 
-  <!-- Match any element -->
+  <!-- Template for any element -->
   <xsl:template match="*">
     <xsl:text>&#10;</xsl:text>
-    <!-- Open the element -->
+    <!-- Start the element -->
     <xsl:text>&lt;</xsl:text>
     <xsl:value-of select="name()"/>
 
-    <!-- Add attributes, each on a new line -->
+    <!-- Print each attribute on a new line -->
     <xsl:for-each select="@*">
       <xsl:text>&#10;  </xsl:text>
       <xsl:value-of select="name()"/>
@@ -19,14 +19,18 @@
       <xsl:text>"</xsl:text>
     </xsl:for-each>
 
-    <!-- Handle empty or non-empty element -->
+    <!-- Check if the element has child nodes -->
     <xsl:choose>
       <xsl:when test="not(node())">
+        <!-- Self-closing tag -->
         <xsl:text>/&gt;</xsl:text>
       </xsl:when>
       <xsl:otherwise>
+        <!-- Closing start tag -->
         <xsl:text>&gt;</xsl:text>
+        <!-- Process child nodes -->
         <xsl:apply-templates select="node()"/>
+        <!-- End tag -->
         <xsl:text>&#10;&lt;/</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
@@ -34,7 +38,7 @@
     </xsl:choose>
   </xsl:template>
 
-  <!-- Copy text, comments, etc. -->
+  <!-- Identity template for non-element nodes (text, comments, etc.) -->
   <xsl:template match="@*|text()|comment()|processing-instruction()">
     <xsl:copy/>
   </xsl:template>
