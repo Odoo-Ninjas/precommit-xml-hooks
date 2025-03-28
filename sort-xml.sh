@@ -3,6 +3,6 @@ set -e
 
 for file in "$@"; do
   tmp=$(mktemp)
-  xsltproc sort-attrs.xslt "$file" | xmlstarlet fo > "$tmp"
+  xsltproc sort-attrs.xslt "$file" | xmlstarlet-format.sh fo > "$tmp"
   mv "$tmp" "$file"
 done
