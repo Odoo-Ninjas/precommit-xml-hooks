@@ -1,10 +1,10 @@
 - id: xmlstarlet-format
   name: Format XML using xmlstarlet
   entry: scripts/xmlscarlet-format.sh
-  language: system
+  language: script
   files: \.xml$
 - id: sort-xml
   name: Sort XML attributes using XSLT
   entry: bash scripts/sort-xml.sh
-  language: system
+  language: script
   files: \.xml$
