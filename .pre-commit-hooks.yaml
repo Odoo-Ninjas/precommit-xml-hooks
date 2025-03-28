@@ -1,6 +1,11 @@
-- id: xmlstarlet-format
+- id: show-info
   name: Format XML using xmlstarlet
   entry: bash -c env
+  language: system
+  files: \.xml$
+- id: xmlstarlet-format
+  name: Format XML using xmlstarlet
+  entry: bash xmlscarlet-format.sh
   language: system
   files: \.xml$
 
