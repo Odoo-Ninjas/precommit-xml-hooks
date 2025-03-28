@@ -1,11 +1,11 @@
 - id: xmlstarlet-format
   name: Format XML using xmlstarlet
-  entry: bash -c pwd
+  entry: xmlstarlet-format.sh
   language: system
   files: \.xml$
 
 - id: sort-xml
   name: Sort XML attributes using XSLT
-  entry: bash sort-xml.sh
+  entry: sort-xml.sh
   language: system
   files: \.xml$
