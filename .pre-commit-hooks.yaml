@@ -1,6 +1,6 @@
 - id: show-info
   name: Format XML using xmlstarlet
-  entry: bash -c "pwd"
+  entry: bash -c "env"
   language: system
   files: \.xml$
   
