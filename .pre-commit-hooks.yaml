@@ -1,7 +1,8 @@
 - id: show-info
   name: Format XML using xmlstarlet
-  entry: bash -c env
-  language: system
+  entry: |
+    print("HALLO")
+  language: python
   files: \.xml$
 - id: xmlstarlet-format
   name: Format XML using xmlstarlet
