@@ -1,14 +1,8 @@
-- id: show-info
-  name: Format XML using xmlstarlet
-  entry: bash
-  language: system
-  files: \.xml$
 - id: xmlstarlet-format
   name: Format XML using xmlstarlet
   entry: scripts/xmlscarlet-format.sh
   language: system
   files: \.xml$
-
 - id: sort-xml
   name: Sort XML attributes using XSLT
   entry: bash scripts/sort-xml.sh
