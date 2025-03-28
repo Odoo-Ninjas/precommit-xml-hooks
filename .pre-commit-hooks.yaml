@@ -1,6 +1,6 @@
 - id: xmlstarlet-format
   name: Format XML using xmlstarlet
-  entry: /usr/bin/pwd; echo "HALLO"
+  entry: bash -c pwd
   language: system
   files: \.xml$
 
